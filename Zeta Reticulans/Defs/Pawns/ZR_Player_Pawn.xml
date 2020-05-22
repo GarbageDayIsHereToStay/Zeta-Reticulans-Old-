@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■PLAYER■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+    <PawnKindDef>
+        <defName>ZR_PLAYER_PAWN_DEF</defName>
+        <label>Zeta Reticulan</label>	
+        <race>ZR_RACE_DEF</race>
+        <defaultFactionType>ZR_FACTION_PLAYER_DEF</defaultFactionType>
+        
+        <combatPower>40</combatPower>
+        
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+        <forceNormalGearQuality>true</forceNormalGearQuality>
+        
+        <backstoryCategories>
+            <li>Zeta_Reticulan</li>
+        </backstoryCategories>
+        
+        <chemicalAddictionChance>0</chemicalAddictionChance>
+        <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+        
+        <minGenerationAge>10</minGenerationAge>
+        <maxGenerationAge>280</maxGenerationAge>
+        
+        
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <apparelColor>(128,128,128)</apparelColor>
+        <apparelRequired>
+            <li>Apparel_BasicShirt</li>
+            <li>Apparel_Pants</li>
+        </apparelRequired>
+        
+        
+        <techHediffsChance>0.90</techHediffsChance>
+        <techHediffsMaxAmount>2</techHediffsMaxAmount>
+        <techHediffsMoney>
+            <min>1030</min>
+            <max>3090</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>Advanced</li>
+            <li>AdvancedWeapon</li>
+            <li>ImplantEmpireCommon</li>
+            <li>ImplantEmpireRoyal</li>
+        </techHediffsTags>
+        <techHediffsDisallowTags>
+            <li>AestheticNose</li>
+            <li>Joywire</li>
+            <li>LoveEnhancer</li>
+            <li>Mindscrew</li>
+            <li>PsychicHarmonization</li>
+            <li>VenomFangs</li>
+            <li>AestheticShaper</li>
+            <li>FieldHand</li>
+            <li>PainCauser</li>
+        </techHediffsDisallowTags> 
+    </PawnKindDef>
+</Defs>

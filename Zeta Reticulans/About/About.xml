@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Zeta Reticulans</name>
+  <author>GarbageDayIsHereToStay</author>
+  <packageId>GarbageDayIsHereToStay.ZetaReticulans.GDIHTSZR</packageId>
+  <supportedVersions><li>1.1</li></supportedVersions>
+  <description>
+The classic alien menace and scourge of humanity we all know and hate has finally arrived, rejoice!
+(There WILL be updates so stay subbed dudes)
+    
+~New~:   
+_____________________
+Added a custom fire type sound for the heat lance
+You'll now be able to see energy bullets at night
+
+Existing Text Fixes/Changes (For translators mostly):
+_____________________
+Couple new settlement names (I add so few every time it's better you don't translate these piece meal and just wait untill they build up after a few months)
+
+Bug fixes:
+_____________________
+Rimdevs changed the Anesthetic hediff to auto apply max severity and since i don't throughly read patch notes i'm just notcing, this change made the traq gun super OP. Fixed to the way it was before by making a new custom anesthic hediff. 
+
+
+
+    
+  </description>
+</ModMetaData>

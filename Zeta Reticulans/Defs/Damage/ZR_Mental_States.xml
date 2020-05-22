@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■MENTAL BREAKS: EXTREME■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+
+  <!--■■■CATATONIC■■■-->  
+  <MentalBreakDef>
+    <defName>ZR_Catatonic</defName>
+    <label>catatonic</label>
+    <baseCommonality>100</baseCommonality>
+    <intensity>Extreme</intensity>
+    <workerClass>MentalBreakWorker_Catatonic</workerClass>
+  </MentalBreakDef>
+  
+  <MentalBreakDef>
+    <defName>ZR_Jailbreaker</defName>
+    <mentalState>ZR_Jailbreaker</mentalState>
+    <baseCommonality>100</baseCommonality>
+    <intensity>Extreme</intensity>
+  </MentalBreakDef>
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>ZR_Jailbreaker</defName>
+    <stateClass>MentalState_Jailbreaker</stateClass>
+    <workerClass>MentalStateWorker_Jailbreaker</workerClass>
+    <label>inducing prisoner to escape</label>
+    <category>Malicious</category>
+    <colonistsOnly>true</colonistsOnly>
+    <prisonersCanDo>false</prisonersCanDo>
+    <minTicksBeforeRecovery>60000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+    <recoverFromSleep>true</recoverFromSleep>
+    <nameColor>(0.8,0.36,1)</nameColor>
+    <moodRecoveryThought>ZR_Catharsis</moodRecoveryThought>
+    <recoveryMessage>{0} is no longer inducing prisoners to escape.</recoveryMessage>
+    <beginLetterLabel>jailbreaker</beginLetterLabel>
+    <beginLetter>{0} FILLER has had a mental breakdown and is going to induce prisoners to escape.</beginLetter>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <baseInspectLine>Mental state: Jailbreaker</baseInspectLine>
+    <allowBeatfire>true</allowBeatfire>
+    <escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+  </MentalStateDef>
+  
+</Defs>

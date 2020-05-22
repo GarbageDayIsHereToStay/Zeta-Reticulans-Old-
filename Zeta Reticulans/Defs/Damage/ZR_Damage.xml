@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!--■■■■■■■■■■■■■■■■■
+  1  Aggression Cannon Damage
+  2. Anodyne Injector Damage
+  3. Control Gel Explosion Damage
+  4. Control Gel Melee Damage
+  5. Heat Damage
+  6. Retinal Scrambler Damage
+  7. Stare Damage
+  8. Voltage Damage
+     ■■■■■■■■■■■■■■■■■--> 
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1. AGGRESSION CANNON DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->     
+<DamageDef Name="ZR_AGGRESSION_CANNON_DAMAGE_BASE">
+        <defName>ZR_AGGRESSION_CANNON_DAMAGE_DEF</defName>
+        <label>Aggression wave</label>
+        
+        <workerClass>NoCamShakeExplosions.DamageWorker_BombNoCamShake</workerClass>
+   
+        <isExplosive>true</isExplosive>
+        <hediff>Burn</hediff>
+        <hediffSkin>Burn</hediffSkin>
+        <hediffSolid>Burn</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_AGGRESSION_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.042</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <armorCategory>Heat</armorCategory>
+        <defaultDamage>1</defaultDamage>
+        <harmsHealth>false</harmsHealth>
+        <makesBlood>false</makesBlood>
+        <externalViolence>false</externalViolence>
+        <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+        <hasForcefulImpact>false</hasForcefulImpact>
+    
+        <defaultStoppingPower>0.5</defaultStoppingPower>
+        <defaultArmorPenetration>1.25</defaultArmorPenetration>
+        <buildingDamageFactor>0</buildingDamageFactor>
+        <plantDamageFactor>2</plantDamageFactor>
+        <minDamageToFragment>20</minDamageToFragment>
+    
+        <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+        <explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+        <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+        <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+        <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <impactSoundType>Electric</impactSoundType>
+        <combatLogRules>Damage_Bomb</combatLogRules>
+    
+        <deathMessage>{0} has died from amygdala overload.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■2. ANODYNE INJECTOR DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->     
+<DamageDef Name="ZR_ANODYNE_INJECTOR_DAMAGE_BASE">
+        <defName>ZR_ANODYNE_INJECTOR_DAMAGE_DEF</defName>
+        <label>bolt</label>
+        
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        
+        <hediff>Stab</hediff>
+        <hediffSolid>Stab</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_ANESTHETIC_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.063</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <defaultDamage>2.5</defaultDamage>
+        <armorCategory>Sharp</armorCategory>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>true</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <hasForcefulImpact>false</hasForcefulImpact>
+        
+        <deathMessage>{0} has died from injections.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■3. CONTROL GEL EXPLOSION DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<DamageDef Name="ZR_CONTROL_GEL_EXPLOSION_DAMAGE_BASE">
+        <defName>ZR_CONTROL_GEL_EXPLOSION_DAMAGE_DEF</defName>
+        <label>control gel</label>
+    
+        <workerClass>NoCamShakeExplosions.DamageWorker_BombNoCamShake</workerClass>
+        
+        <isExplosive>true</isExplosive>
+        <hediff>ChemicalBurn</hediff>
+        <hediffSkin>ChemicalBurn</hediffSkin>
+        <hediffSolid>ChemicalBurn</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_CONTROL_GEL_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.339</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <defaultDamage>1</defaultDamage>
+        <armorCategory>Heat</armorCategory>
+        <harmsHealth>false</harmsHealth>
+        <makesBlood>false</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <hasForcefulImpact>false</hasForcefulImpact>
+        <impactSoundType>Blunt</impactSoundType>
+        
+        <defaultStoppingPower>8</defaultStoppingPower>
+        <defaultArmorPenetration>0.10</defaultArmorPenetration>
+        <buildingDamageFactor>0.05</buildingDamageFactor>
+        <plantDamageFactor>20</plantDamageFactor>
+        <minDamageToFragment>20</minDamageToFragment>
+        
+        <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+        <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+        <explosionCellMote>Mote_BlastDry</explosionCellMote>
+        <explosionColorCenter>(22,22,22)</explosionColorCenter>
+        <explosionColorEdge>(32,32,32)</explosionColorEdge>
+        <soundExplosion>DispensePaste</soundExplosion>
+        <combatLogRules>Damage_Bomb</combatLogRules>
+    
+        <deathMessage>{0} has died from chemical burn.</deathMessage>
+    
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>    
+    
+<ThingDef ParentName="BaseFilth">
+        <defName>ZR_CONTROL_GEL_FILTH_DEF</defName>
+        <label>control gel</label>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <Beauty>-30</Beauty>
+            <Cleanliness>-5</Cleanliness>
+            <MaxHitPoints>130</MaxHitPoints>
+            <Flammability>1.8</Flammability>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Filth/Gel</texPath>
+            <color>(32,32,32)</color>
+        </graphicData>
+        <pathCost>80</pathCost>
+        <filth>
+            <rainWashes>true</rainWashes>
+            <cleaningWorkToReduceThickness>120</cleaningWorkToReduceThickness>
+            <canFilthAttach>true</canFilthAttach>
+        </filth>
+</ThingDef>
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■4. CONTROL GEL MELEE DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->     
+<DamageDef Name="ZR_GEL_MELEE_DAMAGE_BASE">
+        <defName>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</defName>
+        <label>gel punch</label>
+        
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        
+        <hediff>Crush</hediff>
+        <hediffSkin>Cut</hediffSkin>
+        <hediffSolid>Crack</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_CONTROL_GEL_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.025</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <defaultDamage>2</defaultDamage>
+        <armorCategory>Blunt</armorCategory>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>true</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        
+        <deathMessage>{0} has died from a gel weapon.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>   
+ 
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■5. HEAT DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<DamageDef>
+        <defName>ZR_HEAT_DAMAGE_DEF</defName>
+        <label>flame</label>
+        
+        <workerClass>NoCamShakeExplosions.DamageWorker_FlameNoCamShake</workerClass>
+        
+        <isExplosive>true</isExplosive>
+        <hediff>Burn</hediff>
+        <hediffSkin>Burn</hediffSkin>
+        <hediffSolid>Burn</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>Heatstroke</hediff>
+                <severityPerDamageDealt>0.022</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <canInterruptJobs>false</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has burned to death.</deathMessage>
+        
+        <armorCategory>Heat</armorCategory>
+        <defaultDamage>5</defaultDamage>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>false</makesBlood>
+        
+        <defaultStoppingPower>1</defaultStoppingPower>
+        <defaultArmorPenetration>0.5</defaultArmorPenetration>
+        <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+        <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+        <explosionColorCenter>(0,86,206)</explosionColorCenter>
+        <explosionColorEdge>(0,86,206)</explosionColorEdge>
+        <soundExplosion>ZR_SOUND_HEAT_EXPLOSION_DEF</soundExplosion>
+        <impactSoundType>Blunt</impactSoundType>
+        <combatLogRules>Damage_Flame</combatLogRules>
+        <canUseDeflectMetalEffect>true</canUseDeflectMetalEffect>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+ 
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■6. RETINAL SCRAMBLER DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<DamageDef Name="ZR_PULSE_DAMAGE_BASE">
+        <defName>ZR_RETINAL_SCRAMBLER_DAMAGE_DEF</defName>
+        <label>scrambler beam</label>
+        
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        
+        <hediff>Burn</hediff>
+        <hediffSkin>Burn</hediffSkin>
+        <hediffSolid>Burn</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_RETINAL_SCRAMBLE_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.0864</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <defaultDamage>4</defaultDamage>
+        <armorCategory>Heat</armorCategory>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>false</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        
+        <deathMessage>{0} has been shot to death.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■7. STARE DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<DamageDef Name="ZR_STARE_DAMAGE_BASE">
+        <defName>ZR_STARE_DAMAGE_DEF</defName>
+        <label>stare</label>
+        
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        
+        <hediff>ZR_STARE_HEDIFF_DEF</hediff>
+        <hediffSkin>ZR_STARE_HEDIFF_DEF</hediffSkin>
+        <hediffSolid>ZR_STARE_HEDIFF_DEF</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_BREAKDOWN_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.012</severityPerDamageDealt>
+                <victimSeverityScaling>ZR_BREAKDOWN_SENSITIVITY_DEF</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <defaultDamage>2</defaultDamage>
+        <armorCategory>Blunt</armorCategory>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>true</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <hasForcefulImpact>false</hasForcefulImpact>
+        
+        <deathMessage>{0} has died from molecular collapse.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+    
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■8. VOLTAGE DEVICE DAMAGE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->     
+<DamageDef Name="ZR_VOLTAGE_DEVICE_DAMAGE_BASE">
+        <defName>ZR_VOLTAGE_DEVICE_DAMAGE_DEF</defName>
+        <label>voltage discharge</label>
+        
+        <workerClass>NoCamShakeExplosions.DamageWorker_BombNoCamShake</workerClass>
+        
+        <isExplosive>true</isExplosive>
+        <hediff>Burn</hediff>
+        <hediffSkin>Burn</hediffSkin>
+        <hediffSolid>Burn</hediffSolid>
+        <additionalHediffs>
+            <li>
+                <hediff>ZR_VOLTAGE_HEDIFF_DEF</hediff>
+                <severityPerDamageDealt>0.082</severityPerDamageDealt>
+                <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+        
+        <armorCategory>Heat</armorCategory>
+        <defaultDamage>15</defaultDamage>
+        <harmsHealth>true</harmsHealth>
+        <makesBlood>false</makesBlood>
+        <externalViolence>true</externalViolence>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <hasForcefulImpact>false</hasForcefulImpact>
+        
+        <defaultStoppingPower>1</defaultStoppingPower>
+        <defaultArmorPenetration>0.9</defaultArmorPenetration>
+        <buildingDamageFactor>0.5</buildingDamageFactor>
+        <plantDamageFactor>0</plantDamageFactor>
+        <minDamageToFragment>20</minDamageToFragment>
+        
+        <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+        <explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+        <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+        <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+        <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <impactSoundType>Electric</impactSoundType>
+        <combatLogRules>Damage_Bomb</combatLogRules>
+        
+        <deathMessage>{0} has died from voltage.</deathMessage>
+        
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+</DamageDef>
+    
+</Defs>

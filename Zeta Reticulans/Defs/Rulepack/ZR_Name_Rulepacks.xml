@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+<!--■■■■■■■■■■■■■■■■■■PAWN NAMES■■■■■■■■■■■■■■■■■■■■■■■-->
+  
+  <RulePackDef>
+    <defName>ZR_NAMER_DEF</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>zrname->Names/ZR_Names</li>
+      </rulesFiles>
+      <rulesStrings>
+        <li>r_name->[zrname]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>ZR_NAMER_MALE_DEF</defName>
+    <include>
+      <li>ZR_NAMER_DEF</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[zrname]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>ZR_NAMER_FEMALE_DEF</defName>
+    <include>
+      <li>ZR_NAMER_DEF</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[zrname]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+<!--■■■■■■■■■■■■■■■■■■FACTION NAMES■■■■■■■■■■■■■■■■■■■■■■■-->
+  
+  <RulePackDef>
+    <defName>ZR_FACTION_NAMER_DEF</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>zrname->Names/ZR_Factions</li>
+      </rulesFiles>
+      <rulesStrings>
+        <li>r_name->[zrname]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>ZR_SETTLEMENT_NAMER_DEF</defName>
+    <rulePack>
+      <rulesFiles>
+        <li>zrname->Names/ZR_Settlements</li>
+      </rulesFiles>
+      <rulesStrings>
+        <li>r_name->[zrname]</li>
+      </rulesStrings>
+   
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

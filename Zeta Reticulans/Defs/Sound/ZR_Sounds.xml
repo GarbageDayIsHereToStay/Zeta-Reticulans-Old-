@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  AGGRESSION CANNON
+  <!--■■■■■■■■■■■■■■■■■
+  1  Aggression Cannon Sound
+  2. Bolt Sound
+  3. Gel Applicator Sound
+  4. Gel Impact Sound
+  5. Scrambler Sound
+  6. Heat Lance Explosion Sound
+     ■■■■■■■■■■■■■■■■■--> 
+  
+  
+<!--■■■■■■■■■■■■■■■■■■1. AGGRESSION CANNON■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_AGGRESSION_CANNON_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Aggression_Cannon</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>40</min>        
+          <max>40</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>0.8082353</min>        
+          <max>1.205882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef>
+  
+<!--■■■■■■■■■■■■■■■■■■2. BOLT■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_BOLT_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Bolt</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>35</min>        
+          <max>40</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>0.8082353</min>        
+          <max>1.205882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef>
+  
+<!--■■■■■■■■■■■■■■■■■■3. GEL APPLICATOR■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_GEL_APPLICATOR_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>6</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Gel_Applicator</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>100</min>        
+          <max>100</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>0.8082353</min>        
+          <max>1.205882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef>
+  
+ 
+<!--■■■■■■■■■■■■■■■■■■4. GEL IMPACT■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_GEL_IMPACT_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>3</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Gel_Impact</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>45</min>        
+          <max>55</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>0.8082353</min>        
+          <max>1.205882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef> 
+  
+<!--■■■■■■■■■■■■■■■■■■5. SCRAMBLER■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_SCRAMBLER_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Scrambler</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>150</min>        
+          <max>150</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>1.082353</min>        
+          <max>1.205882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef>
+  
+<!--■■■■■■■■■■■■■■■■■■5. HEAT LANCE EXPLOSION■■■■■■■■■■■-->
+<SoundDef>
+    <defName>ZR_SOUND_HEAT_EXPLOSION_DEF</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ZR_Sound_Heat_Explosion</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>30</min>        
+          <max>35</max>
+        </volumeRange>       
+        <pitchRange>
+          <min>0.4032353</min>        
+          <max>0.606882</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+</SoundDef>
+  
+</Defs>

@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!--■■■■■■■■■■■■■■■■■
+  0. Weapon Bases
+  1. Aggression Cannon ThingDef
+  2. Anodyne Injector ThingDef
+  3. Control Cestus ThingDef
+  4. Gel Applicator ThingDef
+  5. Heat Lance ThingDef
+  6. Retinal Scrambler ThingDef
+  7. Voltage Device ThingDef
+     ■■■■■■■■■■■■■■■■■--> 
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■0. BASES■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<ThingDef Abstract="True" Name="MeleeWeaponUltratech" ParentName="BaseWeapon">
+    <techLevel>Ultra</techLevel>
+  
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompProperties_BiocodableWeapon"/>
+    </comps>
+      
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+</ThingDef>
+  
+    
+<ThingDef Abstract="True" Name="BASE_ZR_GUNS" ParentName="BaseGunWithQuality">
+
+      <comps>
+        <li Class="CompProperties_BiocodableWeapon"/>
+      </comps>
+      
+</ThingDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1. AGGRESSION CANNON■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+    <!--■■■PRESENTATION■■■-->      
+<ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_AGGRESSION_CANNON_DEF</defName>
+    <label>aggression cannon</label>
+    <description>A heavy weight energy mortar mounted on a mobile platform; Aggression cannons lob energy discs who's discharge jolts a brain's amygdala into chemical production.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Aggression_Cannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+ 
+    <equippedAngleOffset>45</equippedAngleOffset>
+    
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+  
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <Mass>24</Mass>
+      <AccuracyTouch>0.20</AccuracyTouch>
+      <AccuracyShort>0.45</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.0</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+  
+    <equippedStatOffsets>
+      <MoveSpeed>-2.4</MoveSpeed>
+    </equippedStatOffsets>
+  
+    <verbs>
+      <li>
+        <defaultProjectile>ZR_AGGRESSION_CANNON_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <forcedMissRadius>2</forcedMissRadius>
+        <warmupTime>8</warmupTime>
+        <range>55.9</range>
+        <soundCast>ZR_SOUND_AGGRESSION_CANNON_DEF</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+      </li>
+    </verbs>
+    
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_LONGRANGE_HEAVY</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+</ThingDef>
+  
+    <!--■■■BULLET■■■-->    
+<ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>ZR_AGGRESSION_CANNON_BULLET_DEF</defName>
+    
+    <label>aggression wave</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Aggression_Cannon_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    
+    <projectile>
+      <damageDef>ZR_AGGRESSION_CANNON_DAMAGE_DEF</damageDef>  
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>0.5</stoppingPower>
+      <explosionRadius>3.1</explosionRadius>
+      <explosionDelay>0</explosionDelay>
+      <speed>50</speed>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+</ThingDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■2. ANODYNE INJECTOR■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+    <!--■■■PRESENTATION■■■-->      
+  <ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_ANODYNE_INJECTOR_DEF</defName>
+    <label>anodyne injector</label>
+    <description>Used in procument and laboratory control, auto-injectors fire clouds of hypodermic bolts. This particular weapon has internal reservoirs of anesthetic.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Anodyne_Injector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+  
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.30</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+  
+    <verbs>
+      <li>
+        <defaultProjectile>ZR_ANODYNE_INJECTOR_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <burstShotCount>10</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <warmupTime>1</warmupTime>
+        <range>15.9</range>
+        <soundCast>ZR_SOUND_BOLT_DEF</soundCast>
+        <muzzleFlashScale>3</muzzleFlashScale>
+      </li>
+    </verbs>
+    
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_SHORTRANGE</li>
+    </weaponTags>
+  
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+</ThingDef>
+  
+    <!--■■■BULLET■■■-->    
+<ThingDef ParentName="BaseBullet">
+    <defName>ZR_ANODYNE_INJECTOR_BULLET_DEF</defName>
+  
+    <label>hypodermic bolt</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Anodyne_Injector_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+  
+    <projectile>
+      <damageDef>ZR_ANODYNE_INJECTOR_DAMAGE_DEF</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>0.1</stoppingPower>
+      <speed>80</speed>
+    </projectile>
+</ThingDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■3. CONTROL CESTUS■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+    <!--■■■PRESENTATION■■■-->      
+<ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_CONTROL_CESTUS_DEF</defName>
+    <label>control cestus</label>
+    <description>Control cestus are fitted with compact gel reservoirs and short range liquid projecters to impede target mobility before direct engagement. 
+      \nMagnetic drivers aid in armour penetration and kinetic gel application.</description>
+    <techLevel>Ultra</techLevel>
+    <meleeHitSound>ZR_SOUND_GEL_IMPACT_DEF</meleeHitSound>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Control_Cestus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-50</equippedAngleOffset>
+    
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+  
+    <statBases>
+      <MarketValue>1400</MarketValue>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.05</AccuracyMedium>
+      <AccuracyLong>0.05</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    
+    <verbs>
+      <li>
+        <defaultProjectile>ZR_CONTROL_CESTUS_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <forcedMissRadius>0.5</forcedMissRadius>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <warmupTime>0</warmupTime>
+        <range>2.9</range>
+        <soundCast>ZR_SOUND_GEL_APPLICATOR_DEF</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_SHORTRANGE</li>
+      <li>ZR_NPC_SHORTRANGE_HEAVY</li>
+    </weaponTags>
+  
+    <tools>
+      <li>
+        <label>gel node</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.2</cooldownTime>
+        <chanceFactor>30</chanceFactor>
+      </li>
+    </tools>
+</ThingDef>
+  
+    <!--■■BULLET■■■-->
+<ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>ZR_CONTROL_CESTUS_BULLET_DEF</defName>
+    
+    <label>Gel</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Gel_Applicator_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.5</drawSize>
+    </graphicData>
+    
+    <projectile>
+      <damageDef>ZR_CONTROL_GEL_EXPLOSION_DAMAGE_DEF</damageDef>
+      <preExplosionSpawnThingDef>ZR_CONTROL_GEL_FILTH_DEF</preExplosionSpawnThingDef>
+      <soundExplode>ZR_SOUND_GEL_IMPACT_DEF</soundExplode>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>5</stoppingPower>
+      <explosionRadius>0.9</explosionRadius>
+      <explosionDelay>0</explosionDelay>
+      <speed>85</speed>
+    </projectile>
+</ThingDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■4. GEL APPLICATOR■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+    <!--■■■PRESENTATION■■■-->      
+<ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_GEL_APPLICATOR_DEF</defName>
+    <label>gel applicator</label>
+    <description>Gel applicators are designed to incapacitate large groups of bio-assets at low causality rates.</description>
+    <techLevel>Ultra</techLevel>
+    <meleeHitSound>ZR_SOUND_GEL_IMPACT_DEF</meleeHitSound>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Gel_Applicator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>12</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.05</AccuracyLong>
+      <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+    </statBases>
+  
+    <equippedStatOffsets>
+      <MoveSpeed>-1.0</MoveSpeed>
+    </equippedStatOffsets>
+  
+    <verbs>
+      <li>
+        <defaultProjectile>ZR_GEL_APPLICATOR_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <forcedMissRadius>6</forcedMissRadius>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <warmupTime>1.5</warmupTime>
+        <range>11.9</range>
+        <soundCast>ZR_SOUND_GEL_APPLICATOR_DEF</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_SHORTRANGE_HEAVY</li>
+    </weaponTags>
+  
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>gel node</label>
+        <capacities>
+          <li>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</li>
+        </capacities>
+        <power>1</power>
+        <cooldownTime>3</cooldownTime>
+        <chanceFactor>30</chanceFactor>
+      </li>
+    </tools>
+</ThingDef>
+  
+    <!--■■■BULLET■■■-->    
+<ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>ZR_GEL_APPLICATOR_BULLET_DEF</defName>
+    
+    <label>Gel</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Gel_Applicator_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <projectile>
+      <damageDef>ZR_CONTROL_GEL_EXPLOSION_DAMAGE_DEF</damageDef>
+      <preExplosionSpawnThingDef>ZR_CONTROL_GEL_FILTH_DEF</preExplosionSpawnThingDef>
+      <soundExplode>ZR_SOUND_GEL_IMPACT_DEF</soundExplode>
+      <damageAmountBase>1</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>10</stoppingPower>
+      <explosionRadius>1.9</explosionRadius>
+      <explosionDelay>0</explosionDelay>
+      <speed>45</speed>
+    </projectile>
+</ThingDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■5. HEAT LANCE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+<!--■■■PRESENTATION■■■-->      
+<ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_HEAT_LANCE_DEF</defName>
+    <label>heat lance</label>
+    <description>More lethal than most Zeta Reticlans weapons the heat lance launches a succession of high temperature orbs.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Heat_Lance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  
+    <equippedAngleOffset>45</equippedAngleOffset>
+  
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+    
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.40</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+
+   <verbs>
+      <li>
+        <defaultProjectile>ZR_HEAT_LANCE_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <forcedMissRadius>6</forcedMissRadius>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <warmupTime>2</warmupTime>
+        <range>24.9</range>
+        <soundCast>ZR_SOUND_HEAT_EXPLOSION_DEF</soundCast>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+      
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_LONGRANGE</li>
+    </weaponTags>
+    
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+</ThingDef>
+
+   <!--■■■BULLET■■■-->    
+<ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>ZR_HEAT_LANCE_BULLET_DEF</defName>
+    
+    <label>heat pulse</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Heat_Lance_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1</drawSize>
+    </graphicData>
+  
+    <projectile>
+      <damageDef>ZR_HEAT_DAMAGE_DEF</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <explosionRadius>0.9</explosionRadius>
+      <explosionDelay>0</explosionDelay>
+      <speed>85</speed>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <explosionChanceToStartFire>1</explosionChanceToStartFire>
+    </projectile>
+</ThingDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■6. RETINAL SCRAMBLER■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+    <!--■■■PRESENTATION■■■-->      
+<ThingDef ParentName="BASE_ZR_GUNS">
+    <defName>ZR_RETINAL_SCRAMBLER_DEF</defName>
+    <label>retinal scrambler</label>
+    <description>A suppression weapon designed to cover withdrawal after procument raids by impairing the sight of pursuers.</description>
+    <techLevel>Ultra</techLevel>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Retinal_Scrambler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+  
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+  
+    <verbs>
+      <li>
+        <warmupTime>1.7</warmupTime>
+        <defaultProjectile>ZR_RETINAL_SCRAMBLER_BULLET_DEF</defaultProjectile>
+        <verbClass>Verb_Shoot</verbClass>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>30.9</range>
+        <soundCast>ZR_SOUND_SCRAMBLER_DEF</soundCast>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_LONGRANGE</li>
+    </weaponTags>
+  
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+</ThingDef>
+  
+    <!--■■■BULLET■■■-->    
+<ThingDef ParentName="BaseBullet">
+    <defName>ZR_RETINAL_SCRAMBLER_BULLET_DEF</defName>
+  
+    <label>scrambler beam</label>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Retinal_Scrambler_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+  
+    <projectile>
+      <damageDef>ZR_RETINAL_SCRAMBLER_DAMAGE_DEF</damageDef>
+      <damageAmountBase>4</damageAmountBase>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+      <stoppingPower>0.2</stoppingPower>
+      <speed>90</speed>
+    </projectile>
+</ThingDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■7. VOLTAGE DEVICE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+    <!--■■■PRESENTATION■■■-->
+<ThingDef ParentName="BaseWeapon">
+    <defName>ZR_VOLTAGE_DEVICE_DEF</defName>
+    <label>voltage device</label>
+    <description>An electrically charged device that releases a damaging high voltage pulse.</description>
+    <techLevel>Ultra</techLevel>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Voltage_Device</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+ 
+    <equippedAngleOffset>-40</equippedAngleOffset>
+    
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    
+    <!--■■■STATS + VERBS■■■-->
+    <tradeability>None</tradeability>
+    
+    <smeltProducts>
+      <Steel>10</Steel>
+      <Plasteel>10</Plasteel>
+   </smeltProducts>
+    <statBases> 
+      <MarketValue>2000</MarketValue>
+      <Mass>3.5</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+    </statBases>
+    
+    <verbs>
+      <li>
+        <label>toss voltage device</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>14.9</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>ZR_VOLTAGE_DEVICE_BULLET_DEF</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>ZR_VOLTAGE_DEVICE_DAMAGE_DEF</explosiveDamageType>
+        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+      </li>
+      <li Class="CompProperties_BiocodableWeapon"/>
+    </comps>
+  
+    <!--■■■TAGS + TOOLS■■■-->
+    <weaponTags>
+      <li>ZR_NPC_SHORTRANGE</li>
+      <li>ZR_NPC_SHORTRANGE_HEAVY</li>
+    </weaponTags>
+</ThingDef>
+  
+  <!--■■■BULLET■■■-->  
+<ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>ZR_VOLTAGE_DEVICE_BULLET_DEF</defName>
+    <label>voltage device</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Weapon/ZR_Voltage_Device_Bullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <projectile>
+      <explosionRadius>4.5</explosionRadius>
+      <damageDef>ZR_VOLTAGE_DEVICE_DAMAGE_DEF</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionDelay>120</explosionDelay>
+    </projectile>
+</ThingDef>
+  
+</Defs>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<FactionDef>
+
+  <defName>ZR_FACTION_NPC_DEF</defName>
+  <label>Zeta Reticulans</label>
+  <description>Zeta reticulan research co-ops have clandestinely harvested bio-material and technology from other species for millennium.</description>
+  <pawnSingular>Zeta reticulan</pawnSingular>
+  <pawnsPlural>Zeta reticulans</pawnsPlural>
+  
+  <leaderTitle>Project manager</leaderTitle>
+  <backstoryCategories>
+    <li>Zeta_Reticulan</li>
+  </backstoryCategories>
+  <fixedName>Zeta Reticulan</fixedName>
+  <settlementNameMaker>ZR_SETTLEMENT_NAMER_DEF</settlementNameMaker>
+  <pawnNameMaker>ZR_NAMER_DEF</pawnNameMaker>
+  
+  <colorSpectrum>
+    <li>(200, 200, 200)</li>
+  </colorSpectrum>
+  <factionIconPath>World/WorldObjects/ZR_Faction_Base</factionIconPath>
+  <settlementTexturePath>World/WorldObjects/ZR_Settlement</settlementTexturePath>
+  
+  <canMakeRandomly>true</canMakeRandomly>
+  <requiredCountAtGameStart>1</requiredCountAtGameStart>
+  <settlementGenerationWeight>0.10</settlementGenerationWeight>
+  
+  <permanentEnemy>true</permanentEnemy>
+  
+  <geneticVariance>0.1</geneticVariance>
+  <hairTags>
+    <li>Urban</li>
+  </hairTags>
+  
+  <apparelStuffFilter>
+    <thingDefs>
+      <li>Hyperweave</li>
+    </thingDefs>
+  </apparelStuffFilter>
+  <techLevel>Ultra</techLevel>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ENCOUNTERS■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+
+  <allowedArrivalTemperatureRange>
+    <min>-100</min>
+    <max>60</max>
+  </allowedArrivalTemperatureRange>
+  
+  <canSiege>true</canSiege>
+  <canStageAttacks>true</canStageAttacks>
+  
+  <raidCommonalityFromPointsCurve>
+    <points>
+      <li>(0, 1)</li>
+    </points>
+  </raidCommonalityFromPointsCurve>
+  
+  <maxPawnCostPerTotalPointsCurve>
+    <points>
+      <li>(0,40)</li>
+      <li>(50,50)</li>
+      <li>(70, 160)</li>
+      <li>(120, 240)</li>
+      <li>(180, 360)</li>
+      <li>(560, 1000)</li>
+      <li>(900, 1500)</li>
+      <li>(2000, 3000)</li>
+      <li>(5000, 6000)</li>
+      <li>(100000, 10000)</li>
+    </points>
+  </maxPawnCostPerTotalPointsCurve>
+  
+  <pawnGroupMakers>
+    <!--■■■100 HEAVY■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>10</commonality>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>100</ZR_NPCPAWN_HEAVY_DEF>
+      </options>
+    </li>
+    <!--■■■100 LIGHTRANGED■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>20</commonality>
+      <options>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>100</ZR_NPCPAWN_LIGHTRANGED_DEF>
+      </options>
+    </li>    
+    <!--■■■100 LIGHTCLOSE■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>30</commonality>
+      <options>
+        <ZR_NPCPAWN_LIGHTCLOSE_DEF>100</ZR_NPCPAWN_LIGHTCLOSE_DEF>
+      </options>
+    </li>
+    <!--■■■25/75 HEAVY/LIGHTRANGED■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>15</commonality>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>50</ZR_NPCPAWN_HEAVY_DEF>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>100</ZR_NPCPAWN_LIGHTRANGED_DEF>
+      </options>
+    </li>
+    <!--■■■75/25 HEAVY/LIGHTCLOSE■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>15</commonality>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>100</ZR_NPCPAWN_HEAVY_DEF>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>50</ZR_NPCPAWN_LIGHTRANGED_DEF>
+      </options>
+    </li>
+    <!--■■■75/25 HEAVY/LIGHTCLOSE■■■--> 
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>15</commonality>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>100</ZR_NPCPAWN_HEAVY_DEF>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>50</ZR_NPCPAWN_LIGHTRANGED_DEF>
+      </options>
+    </li>
+    <!--■■■50/50 LIGHTRANGE/LIGHTCLOSE■■■-->  
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>20</commonality>
+      <options>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>100</ZR_NPCPAWN_LIGHTRANGED_DEF>
+        <ZR_NPCPAWN_LIGHTCLOSE_DEF>100</ZR_NPCPAWN_LIGHTCLOSE_DEF>
+      </options>
+    </li>
+    <!--■■■33/33/33 HEAVY/LIGHTRANGE/LIGHTCLOSE■■■-->  
+    <li>
+      <kindDef>Combat</kindDef>
+      <commonality>20</commonality>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>100</ZR_NPCPAWN_HEAVY_DEF>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>100</ZR_NPCPAWN_LIGHTRANGED_DEF>
+        <ZR_NPCPAWN_LIGHTCLOSE_DEF>100</ZR_NPCPAWN_LIGHTCLOSE_DEF>
+      </options>
+    </li>
+    <!--■■■SETTLEMENT■■■-->  
+    <li>
+      <kindDef>Settlement</kindDef>
+      <options>
+        <ZR_NPCPAWN_HEAVY_DEF>100</ZR_NPCPAWN_HEAVY_DEF>
+        <ZR_NPCPAWN_LIGHTRANGED_DEF>20</ZR_NPCPAWN_LIGHTRANGED_DEF>
+        <ZR_NPCPAWN_LIGHTCLOSE_DEF>20</ZR_NPCPAWN_LIGHTCLOSE_DEF>
+      </options>
+    </li>
+  </pawnGroupMakers>
+  
+</FactionDef>
+</Defs>

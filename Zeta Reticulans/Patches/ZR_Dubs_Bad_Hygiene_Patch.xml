@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        
+        <li Class="PatchOperationInsert">
+          <success>Always</success>
+           <xpath>*/ThinkTreeDef[defName = "ZR_MAIN_COLONIST_BEHAVIOR_CORE_DEF"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+          <value>
+            <li Class="DubsBadHygiene.JobGiver_HaveWash"/>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationInsert">
+          <success>Always</success>
+          <xpath>*/ThinkTreeDef[defName = "ZR_MAIN_COLONIST_BEHAVIOR_CORE_DEF"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+          <value>
+            <li Class="DubsBadHygiene.JobGiver_UseToilet"/>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationInsert">
+          <success>Always</success>
+          <xpath>*/ThinkTreeDef[defName = "ZR_MAIN_COLONIST_BEHAVIOR_CORE_DEF"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+          <value>
+            <li Class="DubsBadHygiene.JobGiver_DrinkWater"/>
+          </value>
+        </li>
+        
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>*/AlienRace.ThingDef_AlienRace[defName = "ZR_RACE_DEF"]/statBases</xpath>
+          <value>
+            <ThirstRateMultiplier>0.4</ThirstRateMultiplier>
+          </value>
+        </li>
+        
+         <!--■■■ACCRETION SACKS■■■-->
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>Defs</xpath>
+          <value>
+        <ThoughtDef>
+          <defName>ZR_BowelLevel</defName>
+          <workerClass>DubsBadHygiene.ThoughtWorker_Bowel</workerClass>
+          <stages>
+            <li>
+              <label>bursting sacks</label>
+              <description>My accretion sacks are engorged to their limit and are beginning to leak.</description>
+              <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li>
+              <label>congested sacks</label>
+              <description>My accretion sacks are congested and need to be discharged.</description>
+              <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+          </stages>
+        </ThoughtDef>
+        </value>
+        </li>
+        
+        <!--■■■HYGIENE LEVEL■■■-->
+        <li Class="PatchOperationAdd">
+          <success>Always</success>
+          <xpath>Defs</xpath>
+          <value>
+          <ThoughtDef>
+          <defName>ZR_HygieneLevel</defName>
+          <workerClass>DubsBadHygiene.ThoughtWorker_Hygiene</workerClass>
+          <stages>
+            <li>
+              <label>filthy</label> 
+              <description>My body is encrusted with filth. I need to be thoroughly decontaminated.</description>
+              <baseMoodEffect>-10</baseMoodEffect>
+            </li>
+            <li>
+              <label>dirty</label>
+              <description>I should cleanse my body before continuing my duties.</description>
+              <baseMoodEffect>-4</baseMoodEffect>
+            </li>
+            <li>
+              <label>clean</label>
+              <description>My hygiene meets minimum guidelines.</description>
+              <baseMoodEffect>2</baseMoodEffect>
+            </li>
+            <li>
+              <label>scoured</label>
+              <description>Vigorously scrubbing my body minimizes research contamnation.</description>
+              <baseMoodEffect>4</baseMoodEffect>
+            </li>
+          </stages>
+          </ThoughtDef>
+          </value>
+        </li>
+              
+      </operations>
+    </match>
+  </Operation>
+</Patch>
+

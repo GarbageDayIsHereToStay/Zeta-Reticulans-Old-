@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+<FactionDef Abstract="True" Name="ZR_PLAYER_FACTION_BASE">
+ 
+  <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  <colorSpectrum>
+    <li>(200, 200, 200)</li>
+  </colorSpectrum>
+  
+</FactionDef> 
+  
+<FactionDef Parent="ZR_PLAYER_FACTION_BASE">
+    
+  <defName>ZR_FACTION_PLAYER_DEF</defName>
+  <label>Zeta Reticulan</label>
+  <description>Your research compound.</description>
+  <isPlayer>true</isPlayer>
+  
+  <fixedName>Zeta Reticulan</fixedName>
+  <factionNameMaker>ZR_FACTION_NAMER_DEF</factionNameMaker>
+  <settlementNameMaker>ZR_SETTLEMENT_NAMER_DEF</settlementNameMaker>
+  <playerInitialSettlementNameMaker>ZR_SETTLEMENT_NAMER_DEF</playerInitialSettlementNameMaker>
+  
+  
+  <basicMemberKind>ZR_PLAYER_PAWN_DEF</basicMemberKind>
+  <pawnNameMaker>ZR_NAMER_DEF</pawnNameMaker>
+  <pawnSingular>researcher</pawnSingular>
+  
+  <pawnsPlural>researchers</pawnsPlural>
+  
+  <techLevel>Ultra</techLevel>
+  
+  <backstoryCategories>
+    <li>Zeta_Reticulan</li>
+  </backstoryCategories>
+  <geneticVariance>0.1</geneticVariance>
+  
+  
+  <settlementTexturePath>World/WorldObjects/ZR_Settlement</settlementTexturePath>
+  <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+  
+  <startingResearchTags>
+    <li>ClassicStart</li>
+    <li>ClassicStartTechprints</li>
+  </startingResearchTags>
+  
+  <hairTags>
+    <li>Urban</li>
+  </hairTags>
+  
+  <apparelStuffFilter>
+    <thingDefs>
+      <li>Hyperweave</li>
+    </thingDefs>
+  </apparelStuffFilter>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ENCOUNTERS■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+ 
+  <allowedArrivalTemperatureRange>
+    <min>-80</min>
+    <max>60</max>
+  </allowedArrivalTemperatureRange>
+  
+  <canSiege>true</canSiege>
+  <canStageAttacks>true</canStageAttacks>
+  
+  <raidCommonalityFromPointsCurve>
+    <points>
+      <li>(0, 1)</li>
+    </points>
+  </raidCommonalityFromPointsCurve>
+  
+  <maxPawnCostPerTotalPointsCurve>
+    <points>
+      <li>(0,45)</li>
+      <li>(70, 60)</li>
+      <li>(700, 130)</li>
+      <li>(110, 170)</li>
+      <li>(1300, 200)</li>
+      <li>(100000, 10000)</li>
+    </points>
+  </maxPawnCostPerTotalPointsCurve>
+  <pawnGroupMakers>
+    <li>
+      <kindDef>Combat</kindDef>
+      <options>
+        <ZR_PLAYER_PAWN_DEF>1</ZR_PLAYER_PAWN_DEF>
+      </options>
+    </li>
+    <li>
+      <kindDef>Settlement</kindDef>
+      <options>
+        <ZR_PLAYER_PAWN_DEF>1</ZR_PLAYER_PAWN_DEF>
+      </options>
+    </li>
+  </pawnGroupMakers>
+  
+</FactionDef>
+  
+</Defs>

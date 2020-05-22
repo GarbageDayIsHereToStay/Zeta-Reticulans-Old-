@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--■■■■■■■■■■■■■■■■■■
+ 
+  <ThoughtDef>
+    <defName>ZR_NeedComfort</defName>
+    <workerClass>ThoughtWorker_NeedComfort</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>uncomfortable</label>
+        <description>I've been kind of uncomfortable recently. We need to get something soft to sit on around here.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>comfortable</label>
+        <description>I've been comfortable recently.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>quite comfortable</label>
+        <description>I've been very comfortable recently.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely comfortable</label>
+        <description>I've been extremely comfortable recently. This place is so cushy!</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+      <li>
+        <label>luxuriantly comfortable</label>
+        <description>I am resting on clouds of heaven.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ZR_AteInImpressiveDiningRoom</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li IsNull="True" />
+  
+      <li IsNull="True" />
+
+      <li IsNull="True" />
+   
+      <li>
+        <label>decent dining room</label>
+        <description>I ate my meal in a decent dining room.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>slightly impressive dining room</label>
+        <description>I ate my meal in a slightly impressive dining room.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>somewhat impressive dining room</label>
+        <description>I ate my meal in an impressive dining room.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>very impressive dining room</label>
+        <description>I ate my meal in a very impressive dining room.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely impressive dining room</label>
+        <description>I ate my meal in an extremely impressive dining room. I could stay there forever.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>unbelievably impressive dining room</label>
+        <description>I ate my meal in an unbelievably impressive dining room. I could stay there forever.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+      <li>
+        <label>wondrously impressive dining room</label>
+        <description>I ate my meal in a wonderful dining room. I could stay there forever.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+ 
+ 
+ <ThoughtDef>
+    <defName>ZR_SleptOutside</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>slept outside</label>
+        <description>I had to sleep outdoors without any protection from the elements.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+ 
+  
+    <ThoughtDef>
+    <defName>ZR_Sick</defName>
+    <workerClass>ThoughtWorker_Sick</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>sick</label>
+        <description>I don't feel very well.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>ZR_SoakingWet</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>soaking wet</label>
+        <description>I'm soaking wet.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+ <ThoughtDef>
+    <defName>ZR_FreedFromSlavery</defName>
+    <durationDays>20</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>freed from slavery</label>
+        <description>I have been freed from slavery. I'm so thankful!</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>ZR_MyOrganHarvested</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>my organ harvested</label>
+        <description>The colony harvested body parts from me! They're breaking me down like an old engine!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <ThoughtDef>
+    <defName>ZR_WasImprisoned</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>was imprisoned</label>
+        <description>The colony had me in jail for a while, like a caged animal.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+
+  <ThoughtDef>
+    <defName>ZR_PsychicDrone</defName>
+    <workerClass>ThoughtWorker_PsychicDrone</workerClass>
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>psychic soothe</label>
+        <description>It's like a calming voice at the back of my mind, soothing me, settling my nerves.</description>
+        <baseMoodEffect>16</baseMoodEffect>
+      </li>
+      <li>
+        <label>low psychic drone</label>
+        <description>It's like a scratching at the back of my mind. A voice, whispering. I can only make out a few words, and I don't like them.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>moderate psychic drone</label>
+        <description>I feel like someone is always just out of sight, speaking to me. The voice changes but the message doesn't. I'm supposed to hurt people. Make it go away!</description>
+        <baseMoodEffect>-22</baseMoodEffect>
+      </li>
+      <li>
+        <label>high psychic drone</label>
+        <description>The voice is unbearably loud. It's hard to concentrate. I find myself talking back to it, yelling at it. But it just keeps shouting!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+      <li>
+        <label>extreme psychic drone</label>
+        <description>My heart pounds and I'm sweating. All I can think of is hurting and suffering and all these enemies around me. They're my nightmare, my nightmare, my nightmare...</description>
+        <baseMoodEffect>-40</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>ZR_HospitalPatientRoomStats</defName>
+    <workerClass>ThoughtWorker_HospitalPatientRoomStats</workerClass>
+    <stages>    
+      <li>
+        <label>awful hospital</label>
+        <description>This hospital is awful.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>dull hospital</label>
+        <description>I'm stuck in a dull hospital.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li IsNull="True" />
+      
+      <li IsNull="True" />
+   
+      <li>
+        <label>slightly impressive hospital</label>
+        <description>My hospital is slightly impressive. It makes me feel a bit better.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+      <li>
+        <label>somewhat impressive hospital</label>
+        <description>My hospital is impressive. It makes me feel better.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>very impressive hospital</label>
+        <description>My hospital is very impressive. It makes me feel better.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely impressive hospital</label>
+        <description>My hospital is extremely impressive. It makes me feel better already.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>unbelievably impressive hospital</label>
+        <description>My hospital is unbelievably impressive. It makes me feel better already.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>wondrously impressive hospital</label>
+        <description>My hospital is wonderful! It makes me feel better already.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>ZR_DefeatedHostileFactionLeader</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>defeated hostile leader {0}</label>
+        <description>They were leading efforts to destroy us, and I took them down!</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+
+  
+  <ThoughtDef>
+    <defName>ZR_UsedPrivateBathroom</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>awful bathroom</label>
+        <description>My bathroom is an awful place.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li IsNull="True" />            --> 
+      <!-- dull -->
+      
+  <!--   <li>
+        <label>decent bathroom</label>
+        <description>My bathroom is very interesting. I like it.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>slightly impressive bathroom</label>
+        <description>My bathroom is actually slightly impressive. I like it.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>impressive bathroom</label>
+        <description>My bathroom is impressive. I love it!</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>very impressive bathroom</label>
+        <description>My bathroom is very impressive. This is the best place ever!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>extremely impressive bathroom</label>
+        <description>My bathroom is extremely impressive. This is the best place ever!</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>unbelievably impressive bathroom</label>
+        <description>My bathroom is unbelievably impressive. This is the best place ever!</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+      <li>
+        <label>wondrously impressive bathroom</label>
+        <description>My bathroom is the best place one can ever imagine. It's wonderful.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+  
+  
+  
+  -->
+ <!--■■■■■■■■■■■■■■■■■
+     BEING A JERK
+  1. Bio-Asset Deconstructed (Pawn) aka "ButcheredHumanlikeCorpse"
+  2. Bio-Asset Deconstructed (Colony) aka "KnowButcheredHumanlikeCorpse"
+  3. Biomaterial Extracted (Guest) aka "KnowGuestOrganHarvested'
+  4. Biomaterial Extracted (Colonist) aka "KnowColonistOrganHarvested"
+  5. Bio-asset Released aka "ReleasedHealthyPrisoner"
+  6  Bio-asset Sold aka "KnowPrisonerSold"
+
+     DEATH & LOSS
+  1. Co-op Resources Lost aka "ColonistLost"
+  2. Co-op Resources Squandered aka "KnowColonistDied"
+  3. Negligent Handling aka "KilledHumanlikeBloodlust"
+   
+     FOOD
+  1. Ate Awful Meal
+  2. Ate From Bio-asset (Animal) aka "AteCorpse"
+  3. Ate From Bio-asset (Humanlike) aka "AteHumanlikeMeatDirect"
+  4. Ate From Bio-asset (Insect) aka "AteInsectMeatDirect"
+  5. Ate Raw Biomaterial aka "AteRawFood"
+  6. Ate Rotten Biomaterial aka "AteRottenFood"
+  7. Need Food
+  
+     ROOMS & ENVIROMENT
+  1. Cold 
+  2. Darkness
+  3. Heat
+  4. Magnetospheric Lighting aka "Aurora"
+  5. Need Beauty
+  
+     SLEEPING
+  1. Need Rest
+  2. Rest Period Disturbed aka "SleepDisturbed"
+  3. Slept In Alcove aka "SleptInBedroom"
+  4. Slept In Cold
+  5. Slept In Drey aka "SleptInBarracks"
+  6. Slept In Heat
+  7. Slept On Ground
+    
+     SOCIAL
+  1. Attended Conference aka "AttendedParty"
+  2. Original Co-partner aka "CrashedTogether"
+    
+     MISC
+  1. Composed Thoughts aka "Catharsis"
+  2. Initial Foundation aka "NewColonyOptimism"
+  3. Onitial Progress aka "NewColonyHope"
+  4. Pain
+  5. Work Passion
+    
+     MOD- DUB'S BAD HYGIENE (BowelLevel + HygieneLevel are in the patch.xml)
+  1. Cooling Water (Bath) aka "ColdBath"
+  2. Cooling Water (Shower) aka "ColdShower"
+  3. Discharged On Myself aka "SoiledSelf"
+  4. Drank Discharges aka "DrankUrine"
+  5. Drank Filthy Water
+  6. Open expulsion aka "openDefecation"
+  7. Warming Water (Bath) aka "HotBath"
+  8. Warming Water (Shower) aka "HotShower"
+  
+     MOD- HARVEST ORGANS POST MORTEM
+  1. Biomaterial Salvaged (Pawn) aka "HarvestedHumanlikeCorpse"
+  2. Biomaterial Salvaged (Colony) aka "KnowHarvestedHumanlikeCorpse"
+     ■■■■■■■■■■■■■■■■■--> 
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■BEING A JERK■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. BIO-ASSET DECONSTRUCTED (PAWN)■■■-->
+<ThoughtDef>
+    <defName>ZR_ButcheredHumanlikeCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>bio-asset deconstructed</label>
+        <description>A bio-asset's physical attributes have been recorded for use in demographic analysis.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■2. BIO-ASSET DECONSTRUCTED (COLONY)■■■-->
+<ThoughtDef>
+    <defName>ZR_KnowButcheredHumanlikeCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>bio-asset deconstructed</label>
+        <description>A bio-asset's physical attributes have been recorded for use in demographic analysis.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■3. BIOMATERIAL EXTRACTED (COLONIST)■■■-->
+<ThoughtDef>
+    <defName>ZR_KnowColonistOrganHarvested</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>biomaterial extracted</label>
+        <description>The co-op harvested material from a live bio-asset. This aids in our research.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■4. BIOMATERIAL EXTRACTED (GUEST)■■■-->
+<ThoughtDef>
+    <defName>ZR_KnowGuestOrganHarvested</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>biomaterial extracted</label>
+        <description>The co-op harvested material from a live bio-asset. This aids in our research.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■5. BIO-ASSET RELEASED■■■-->
+<ThoughtDef>
+    <defName>ZR_ReleasedHealthyPrisoner</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>bio-asset released</label>
+        <description>We released an unprocessed bio-asset. What a waste of material.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■6. BIO-ASSET SOLD■■■-->
+<ThoughtDef>
+    <defName>ZR_KnowPrisonerSold</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>bio-asset sold</label>
+        <description>A bio-asset has been sold off. The resources gained will serve the co-op in its goals.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■DEATH & LOSS■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. CO-OP RESOURCES LOST■■■-->
+<ThoughtDef>
+    <defName>ZR_ColonistLost</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <showBubble>true</showBubble>
+    <stages>
+      <li>
+        <label>co-op resources lost</label>
+        <description>Co-op resources have been lost. 
+          \nKeeping co-op members safe so they can attend to their duties and acquired bio-assets in remunerative custody is a priority.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■2. CO-OP RESOURCES SQUANDERED■■■-->
+<ThoughtDef ParentName="DeathMemory">
+    <defName>ZR_KnowColonistDied</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>co-op resources squandered</label>
+        <description>Co-op resources have been wasted. 
+          \nKeeping co-op members alive to perform work functions and acquired bio-assets vital until they can be processed is a priority.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■3. NEGLIGENT HANDLING■■■-->
+<ThoughtDef>
+    <defName>ZR_KilledHumanlikeBloodlust</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>4</durationDays>
+    <stackLimit>6</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>negligent handling</label>
+        <description>We gain more from processing living bio-assets. Although a certain amount of loss is expected as part of normal operations this failure reflects on me.
+          \nSelf-management is crucial to the success of the whole.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■FOOD■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. ATE AWFUL MEAL■■■-->
+<ThoughtDef>
+    <defName>ZR_AteAwfulMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate awful meal</label>
+        <description>I ate poorly prepared nourishment. This is suboptimal for digestion.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef> 
+  
+<!--■■■2. ATE FROM BIO-ASSET (ANIMAL)■■■-->
+<ThoughtDef>
+    <defName>ZR_AteCorpse</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate from bio-asset</label>
+        <description>I ate directly from a bio-asset. Properly preparing nourishment would aid in consumption and digestion.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■3. ATE FROM BIO-ASSET (HUMANLIKE)■■■-->
+<ThoughtDef>
+    <defName>ZR_AteHumanlikeMeatDirect</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate from bio-asset</label>
+        <description>I ate directly from a bio-asset. Properly preparing nourishment would aid in consumption and digestion.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■4. ATE FROM BIO-ASSET (INSECT)■■■-->
+<ThoughtDef>
+    <defName>ZR_AteInsectMeatDirect</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate from bio-asset</label>
+        <description>I ate directly from a bio-asset. Properly preparing nourishment would aid in consumption and digestion.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■5. ATE RAW BIOMATERIAL■■■-->
+<ThoughtDef>
+    <defName>ZR_AteRawFood</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate raw biomaterial</label>
+        <description>I ate unprocessed biomaterial. Properly preparing nourishment would aid in consumption and digestion.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■6. ATE ROTTEN BIOMATERIAL■■■-->
+<ThoughtDef>
+    <defName>ZR_AteRottenFood</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate rotten biomaterial</label>
+        <description>I ate some decaying, putrid biomaterial. My digestive system can't handle this.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■7. NEED FOOD■■■-->
+<ThoughtDef>
+    <defName>ZR_NeedFood</defName>
+    <workerClass>ThoughtWorker_NeedFood</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>hungry</label>
+        <description>I require nourishment.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>ravenously hungry</label>
+        <description>My dietary needs are not being met. This will effect my work soon.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>malnourished</label>
+        <description>A long time has passed since my last nourishment. My work is suffering and my body is starting to lose mass.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>badly malnourished</label>
+        <description>My body is wasting away. It's difficult to focus on my tasks.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+      <li>
+        <label>starving</label>
+        <description>It's almost impossible to concentrate. My limbs are hard to move. I am in pain.</description>
+        <baseMoodEffect>-22</baseMoodEffect>
+      </li>
+      <li>
+        <label>advanced starvation</label>
+        <description>I can barely move or think. Losing consciousness is a risk. The pain is severe.</description>
+        <baseMoodEffect>-28</baseMoodEffect>
+      </li>
+      <li>
+        <label>extreme starvation</label>
+        <description>Sustenance... anything... </description>
+        <baseMoodEffect>-34</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ROOMS & ENVIROMENT■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. COLD■■■-->
+<ThoughtDef>
+    <defName>ZR_EnvironmentCold</defName>
+    <workerClass>ThoughtWorker_Cold</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>chilly</label>
+        <description>The temperature is too low.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>cold</label>
+        <description>The low temperature is affecting my fine motor control and making it difficult to work.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>   
+      <li>
+        <label>numbing cold</label>
+        <description>These conditions are dangerous. My extremities are becoming stiff and hard to move. My metabolic processess are slowing.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>absolutely freezing</label>
+        <description>If I don't escape these conditions and raise my core temperature i'll die.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>  
+  
+<!--■■■2. DARKNESS■■■-->
+<ThoughtDef>
+    <defName>ZR_EnvironmentDark</defName>
+    <workerClass>ThoughtWorker_Dark</workerClass>
+    <stages>
+      <li>
+        <label>darkness</label>
+        <description>I need light to work efficiently.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■3. HEAT■■■-->
+<ThoughtDef>
+    <defName>ZR_EnvironmentHot</defName>
+    <workerClass>ThoughtWorker_Hot</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>warm</label>
+        <description>The temperature is too high.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <li>
+        <label>hot</label>
+        <description>I need to decrease my internal temperature before necrosis begins and my brain tissue is damaged.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>    
+      <li>
+        <label>sweltering hot</label>
+        <description>I can feel fluid drawing from my extremities into cooling vacuoles around my brain; I am in extreme danger.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+      <li>
+        <label>blistering hot</label>
+        <description>If I don't escape these conditions and lower my core temperature i'll be die.</description>
+        <baseMoodEffect>-24</baseMoodEffect>
+      </li>     
+    </stages>
+</ThoughtDef>
+ 
+<!--■■■4. MAGNETOSPHERIC LIGHTNING■■■-->
+<ThoughtDef>
+    <defName>ZR_Aurora</defName>
+    <workerClass>ThoughtWorker_Aurora</workerClass>
+    <gameCondition>Aurora</gameCondition>
+    <stages>
+      <li>
+        <label>magnetospheric lighting</label>
+        <description>The extra illumnation makes night operations more efficient.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■5. NEED BEAUTY■■■-->
+<ThoughtDef>
+    <defName>ZR_NeedBeauty</defName>
+    <workerClass>ThoughtWorker_NeedBeauty</workerClass>
+    <stages>
+      <li>
+        <label>flithy environment</label>
+        <description>This place is filthy. These conditions will hinder work severely and cause unacceptable rates of material spoilage.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+      <li>
+        <label>soiled environment</label>
+        <description>This place is soiled. Working in these conditions is inefficient and will cause research contamnation.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>crude environment</label>
+        <description>This place does not meet the co-op's minimum design and sanitation regulations.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>tidy environment</label>
+        <description>This place meets basic project guidelines.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>efficient environment</label>
+        <description>This place is sanitary and the layout is efficent.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>ergonomic environment</label>
+        <description>This place is nearly sterile and the room design is extremely ergonomic.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■SLEEP■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. NEED REST■■■-->
+<ThoughtDef>
+    <defName>ZR_NeedRest</defName>
+    <workerClass>ThoughtWorker_NeedRest</workerClass>
+    <stages>
+      <li>
+        <label>drowsy</label>
+        <description>It's becoming hard to organize my thoughts. I need to rest.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>tired</label>
+        <description>I risk making serious mistakes in this state. Co-op guidelines strongly recommend I cease working.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>exhausted</label>
+        <description>I'm close to physical collapse; I need to retire to somewhere my body won't be harmed when I do.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+ 
+<!--■■■2. SLEEP DISTURBED■■■-->
+<ThoughtDef>
+    <defName>ZR_SleepDisturbed</defName>
+    <icon>Things/Mote/ThoughtSymbol/SleepZ</icon>
+    <showBubble>true</showBubble>
+    <durationDays>1</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>rest period disturbed</label>
+        <description>A stable circadian rhythm is crucial for mental fitness.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>  
+
+<!--■■■3. SLEPT IN ALCOVE■■■-->
+<ThoughtDef>
+    <defName>ZR_SleptInBedroom</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>satisfactory rest alcove</label>
+        <description>My last used rest alcove was sufficient.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+      <li>
+        <label>alcove surpassed benchmarks</label>
+        <description>The last rest alcove I used was well engineered and surpassed recommended benchmarks.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>ergonomic alcove</label>
+        <description>A culmination of our best designs and knowledge, resting in that last alcove left my mind feeling ordered.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■4. SLEPT IN COLD■■■--> 
+<ThoughtDef>
+    <defName>ZR_SleptInCold</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>slept in the cold</label>
+        <description>I slept in the cold. 
+          \nWe need to heat our facilities better.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■5. SLEPT IN DREY■■■-->
+<ThoughtDef>
+    <defName>ZR_SleptInBarracks</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>emergency drey</label>
+        <description>Co-op protocols recommend individual rest alcoves to limit disruptions. It's imperative that we optimize our operating procedures.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>resting drey</label>
+        <description>Communal resting drey are not advised even if a room's structural and sanitation parameters would otherwise meet set benchmarks.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>well-built drey</label>
+        <description>Despite its cleanliness and excellent design continued use of any shared resting drey will cut into long-term productivity margins.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■6. SLEPT IN HEAT■■■-->
+<ThoughtDef>
+    <defName>ZR_SleptInHeat</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>slept in the heat</label>
+        <description>I slept in the heat. 
+          \nWe need to cool our facilities better.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■7. SLEPT ON GROUND■■■--> 
+<ThoughtDef>
+    <defName>ZR_SleptOnGround</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>slept on ground</label>
+        <description>I should be resting on an elevated plane with proper cranial support.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■SOCIAL■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. ATTENDED CONFERENCE■■■-->
+<ThoughtDef>
+    <defName>ZR_AttendedParty</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>attended conference</label>
+        <description>Group consultations increase the co-op's coordination and efficiency.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■2. ORIGINAL CO-PARTNER■■■-->
+<ThoughtDef>
+    <defName>ZR_CrashedTogether</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>45</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>original co-partner</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■MISC■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. CATHARSIS■■■-->
+<ThoughtDef>
+    <defName>ZR_Catharsis</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>composed thoughts</label>
+        <description>I have organized my thoughts and I am eager to get back to my work.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■2. INITIAL FOUNDATION■■■-->
+<ThoughtDef>
+    <defName>ZR_NewColonyOptimism</defName>
+    <durationDays>8</durationDays>
+    <nextThought>ZR_NewColonyHope</nextThought>
+    <stages>
+      <li>
+        <label>initial foundation</label>
+        <description>I am motivated to establish a facility and begin data collection.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■3. INITIAL PROGRESS■■■-->
+<ThoughtDef>
+    <defName>ZR_NewColonyHope</defName>
+    <durationDays>8</durationDays>
+    <stages>
+      <li>
+        <label>initial progress</label>
+        <description>The co-op seems to be progressing on schedule.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+
+<!--■■■4. PAIN■■■-->
+<ThoughtDef>
+    <defName>ZR_Pain</defName>
+    <workerClass>ThoughtWorker_Pain</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>Masochist</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>negligible pain</label>
+        <description>The pain is negligible.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>minor pain</label>
+        <description>This pain is starting to interfere with my thought process.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li>
+        <label>serious pain</label>
+        <description>I need to seek treatment immediately and stop this distraction.</description>
+        <baseMoodEffect>-9</baseMoodEffect>
+      </li>
+      <li>
+        <label>mind-shattering pain</label>
+        <description>Without pain. without sacrifice.. we would have.. nothing...</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■5. WORK PASSION■■■-->
+<ThoughtDef>
+    <defName>ZR_DoingPassionateWork</defName>
+    <workerClass>ThoughtWorker_PassionateWork</workerClass>
+    <stages>
+      <li>
+        <label>minor passion for my work</label>
+        <description>Work brings meaning and i'm productive in this field.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+      <li>
+        <label>burning passion for my work</label>
+        <description>This is my field of expertise. I feel like i'm working at peak efficiency.</description>
+        <baseMoodEffect>20</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■MOD THOUGHTS- DUB'S BAD HYGIENE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. COOLING WATER (BATH)■■■-->
+<ThoughtDef>
+    <defName>ZR_ColdBath</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cooling water</label>
+        <description>The cold water has abated my hyperthermia. The cooling vacuoles around my brain are contracting.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■2. COOLING WATER (SHOWER)■■■-->
+<ThoughtDef>
+    <defName>ZR_ColdShower</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cooling water</label>
+        <description>The cold water has abated my hyperthermia. The cooling vacuoles around my brain are contracting.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■3. DISCHARGED ON MYSELF■■■-->
+<ThoughtDef>
+    <defName>ZR_SoiledSelf</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>discharged on myself</label>
+        <description>My accretion sacks have undergone catastrophic failure and I am now covered in my own waste explulsions.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■4. DRANK DISCHARGE■■■-->
+<ThoughtDef>
+    <defName>ZR_DrankUrine</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>drank discharge</label>
+        <description>I drank my own discharge.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■5. DRANK FILTHY WATER■■■-->
+<ThoughtDef>
+    <defName>ZR_DrankDirtyWater</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>drank filthy water</label>
+        <description>I drank contaminated water.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+
+<!--■■■6. OPEN EXPULSION■■■-->
+<ThoughtDef>
+    <defName>ZR_openDefecation</defName>
+    <durationDays>0.15</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>open expulsion</label>
+        <description>I discharged my accretion sacks in the open; This is an unwieldy process. Proper disposal fixtures are required.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■7. WARMING WATER (BATH)■■■-->
+<ThoughtDef>
+    <defName>ZR_HotBath</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>warming water</label>
+        <description>The hot water has abated my hypothermia and my fine motor control is returning.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+  
+<!--■■■8. WARMING WATER (SHOWER)■■■-->
+<ThoughtDef>
+    <defName>ZR_HotShower</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>warming water</label>
+        <description>The hot water has abated my hypothermia and my fine motor control is returning.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+    <showBubble>true</showBubble>
+</ThoughtDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■MOD THOUGHTS- HARVEST ORGANS POST MORTEM■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<!--■■■1. BIOMATERIAL SALVAGED (PAWN)■■■-->
+<ThoughtDef>
+    <defName>ZR_HarvestedHumanlikeCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>biomaterial salvaged</label>
+        <description>Excising material from cadavers is less instructive than extraction from a living system.</description> 
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef>
+  
+<!--■■■2. BIOMATERIAL SALVAGED (COLONY)■■■-->
+<ThoughtDef>
+    <defName>ZR_KnowHarvestedHumanlikeCorpse</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>12</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>biomaterial salvaged</label>
+        <description>Excising material from cadavers is less instructive than extraction from a living system.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+</ThoughtDef> 
+  
+</Defs>

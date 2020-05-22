@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+   <RulePackDef>
+    <defName>MANEUVER_STARE_DEF</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_inf(p=2)->glare</li>
+        <li>damaged_inf(p=2)->peer</li>
+        <li>damaged_inf->lock eyes with</li>
+        <li>damaged_inf->stare</li>
+        <li>damaged_inf->gaze</li>
+
+        <li>damaged_past(p=2)->glared at</li>
+        <li>damaged_past(p=2)->peered into</li>
+        <li>damaged_past->locked eyes with</li>
+        <li>damaged_past->stared at</li>
+        <li>damaged_past->gazed at</li>
+
+        <li>damaged_present(p=2)->misaligned synapses</li>
+        <li>damaged_present(p=2)->causing subatomic warping in</li>
+        <li>damaged_present->locking eyes with</li>
+        <li>damaged_present->starring at</li>
+        <li>damaged_present->gazing at</li>
+
+        <li>flavortext_consequence(recipient_flesh!=Mechanoid)->causing synapse disruption</li>
+        <li>flavortext_consequence->causing atomic buckling</li>
+        <li>flavortext_consequence->lurching [RECIPIENT_objective] forwards</li>
+        <li>flavortext_consequence->jolting [RECIPIENT_objective] to the side</li>
+
+        <li>destroyed_past->gnarled</li>
+        <li>destroyed_past->obliterated</li>
+        <li>destroyed_past->annihilated</li>
+        <li>destroyed_past->warped</li>
+
+        <li>destroyed_present->shattering</li>
+        <li>destroyed_present->crushing</li>
+        <li>destroyed_present->obliterating</li>
+        <li>destroyed_present->annihilating</li>
+        <li>destroyed_present->breaking</li>
+
+        <li>destroyed_suffix->[to] pieces</li>
+        <li>destroyed_suffix->[to] bits</li>
+        <li>destroyed_suffix(recipient_flesh!=Mechanoid)->[to] flesh slag</li>
+        <li>destroyed_suffix->[to] fragments</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>MANEUVER_STARE_MELEE_HIT_DEF</defName>
+    <include>
+      <li>MANEUVER_STARE_DEF</li>
+      <li>ZR_MANEUVER_COMBAT_HIT_MELEE_DEF</li>
+    </include>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>MANEUVER_STARE_MELEE_DEFLECT_DEF</defName>
+    <include>
+      <li>MANEUVER_STARE_DEF</li>
+      <li>Combat_Deflect</li>
+    </include>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>MANEUVER_STARE_MELEE_MISS_DEF</defName>
+    <include>
+      <li>MANEUVER_STARE_DEF</li>
+      <li>Combat_Miss</li>
+    </include>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>MANEUVER_STARE_MELEE_DODGE_DEF</defName>
+    <include>
+      <li>MANEUVER_STARE_DEF</li>
+      <li>Combat_Dodge</li>
+    </include>
+  </RulePackDef>
+  
+  
+
+
+</Defs>

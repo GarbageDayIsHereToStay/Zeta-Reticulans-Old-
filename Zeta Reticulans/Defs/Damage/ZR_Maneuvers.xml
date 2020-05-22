@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ManeuverDef>
+    <defName>ZR_STARE_DAMAGE_DEF</defName>
+    <requiredCapacity>ZR_STARE_DAMAGE_DEF</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>ZR_STARE_DAMAGE_DEF</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>MANEUVER_STARE_MELEE_HIT_DEF</combatLogRulesHit>
+    <combatLogRulesDeflect>MANEUVER_STARE_MELEE_DEFLECT_DEF</combatLogRulesDeflect>
+    <combatLogRulesMiss>MANEUVER_STARE_MELEE_MISS_DEF</combatLogRulesMiss>
+    <combatLogRulesDodge>MANEUVER_STARE_MELEE_DODGE_DEF</combatLogRulesDodge>
+  </ManeuverDef>
+
+
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■CONTROL GEL MELEE■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+ 
+  <ManeuverDef>
+    <defName>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</defName>
+    <requiredCapacity>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>ZR_CONTROL_GEL_MELEE_DAMAGE_DEF</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+</Defs>

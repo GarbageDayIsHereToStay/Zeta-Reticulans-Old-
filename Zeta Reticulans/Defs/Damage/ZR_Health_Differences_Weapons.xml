@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!--■■■■■■■■■■■■■■■■■
+    1. Aggression Hediff
+    2. Anesthetic Hediff
+    2. Retinal Scramble Hediff
+    3. Control Gel Hediff  
+    4. Voltage Hediff
+    ■■■■■■■■■■■■■■■■■--> 
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■1. AGGRESSION HEDIFF■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<HediffDef>
+    <defName>ZR_AGGRESSION_HEDIFF_DEF</defName>
+    <label>amygdala overload</label>
+    <description>Zeta Reticulans make use of coded energy to electrically induce various reactions in biological systems. 
+      \nIn this case information packets have been programmed to trigger production in the amygdala and cause extreme aggression.</description>
+    <labelNoun>overloaded</labelNoun>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>berserk</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.01</healAmount>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.20</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.001</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+</HediffDef>
+  
+  <!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■2. ANESTHETIC HEDIFF■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<HediffDef ParentName="DiseaseBase">
+    <defName>ZR_ANESTHETIC_HEDIFF_DEF</defName>
+    <label>anesthetic</label>
+    <description>Sleep drugs in the bloodstream. Anesthetic renders creatures unconscious.</description>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>45000~120000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.8</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>wearing off</label>
+        <painFactor>0.95</painFactor>
+        <vomitMtbDays>4</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.9</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>50</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>woozy</label>
+        <painFactor>0.8</painFactor>
+        <vomitMtbDays>0.25</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.7</setMax>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <forgetMemoryThoughtMtbDays>5</forgetMemoryThoughtMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <label>sedated</label>
+        <painFactor>0</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.01</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+</HediffDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■3. RETINAL SCRAMBLE HEDIFF■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<HediffDef>
+    <defName>ZR_RETINAL_SCRAMBLE_HEDIFF_DEF</defName>
+    <label>blind</label>
+    <labelNoun>blindness</labelNoun>
+    <description>blinded</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>retinal overload</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.010</healAmount>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.0125</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Disintegrated</destroyedLabel>
+      <destroyedOutLabel>Disintegrated</destroyedOutLabel>
+    </injuryProps>
+    
+<!--■■■■■■■■■■■■■■■■■■STAGES■■■■■■■■■■■■■■■■■■■■■■■-->
+    <!--■■■INITIAL (1)■■■-->
+    <stages>
+      <li>
+        <label>initial</label>
+        <minSeverity>0.075</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.075</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■INITIAL (2)■■■-->
+      <li>
+        <label>initial</label>
+        <minSeverity>0.15</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MINOR (3)■■■-->
+      <li>
+        <label>minor</label>
+        <minSeverity>0.225</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.225</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MINOR (4)■■■-->
+      <li>
+        <label>minor</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MODERATE (5)■■■-->
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.375</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.375</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MODERATE (6)■■■-->
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.45</minSeverity>
+        <vomitMtbDays>5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.45</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MODERATE (7)■■■-->
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.525</minSeverity>
+        <capMods>
+          
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.525</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■SERIOUS (8)■■■-->
+      <li>
+        <label>serious</label>
+        <minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.6</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■SERIOUS (9)■■■-->
+      <li>
+        <label>serious</label>
+        <minSeverity>0.675</minSeverity>
+        <vomitMtbDays>3</vomitMtbDays>
+        <capMods>
+           <li>
+            <capacity>Sight</capacity>
+            <offset>-0.675</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■SERIOUS (10)■■■-->
+      <li>
+        <label>serious</label>
+        <minSeverity>0.75</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+         <li>
+            <capacity>Sight</capacity>
+            <offset>-0.75</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■EXTREME (11)■■■-->
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.825</minSeverity>
+        <vomitMtbDays>1.25</vomitMtbDays>
+        <capMods>
+          
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.825</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■EXTREME (12)■■■-->
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.9</minSeverity>
+        <vomitMtbDays>0.75</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.9</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■EXTREME (13)■■■-->  
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.95</minSeverity>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.99</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+</HediffDef>
+  
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■4. CONTROL GEL HEDIFF■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<HediffDef>
+    <defName>ZR_CONTROL_GEL_HEDIFF_DEF</defName>
+    <label>control gel</label>
+    <labelNoun>gel</labelNoun>
+    <description>control gel</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>coated</battleStateLabel>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.0085</healAmount>
+      </li>
+    </comps>
+  <injuryProps>
+    <painPerSeverity>0.005</painPerSeverity>
+    <averagePainPerSeverityPermanent>0.005</averagePainPerSeverityPermanent>
+    <canMerge>true</canMerge>
+    <destroyedLabel>Lost to control gel</destroyedLabel>
+  </injuryProps>
+  
+<!--■■■■■■■■■■■■■■■■■■STAGES■■■■■■■■■■■■■■■■■■■■■■■-->
+  <!--■■■FADE LEVEL (1)■■■-->  
+  <stages>
+    <li>
+      <label>initial</label>
+      <minSeverity>0.05</minSeverity>
+      <partEfficiencyOffset>-0.05</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.05</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.05</offset>
+        </li>
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.015</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.015</offset>
+        </li>
+      </capMods>
+    </li>
+    <!--■■■FADE LEVEL(2)■■■-->  
+    <li>
+      <label>initial</label>
+      <minSeverity>0.10</minSeverity>
+      <partEfficiencyOffset>-0.13</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.1</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.1</offset>
+        </li>
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.7</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.7</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.033</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.033</offset>
+        </li>
+      </capMods>
+    </li>
+    <!--■■■MINOR (3)■■■-->  
+    <li>
+      <label>minor</label>
+      <minSeverity>0.15</minSeverity>
+      <partEfficiencyOffset>-0.25</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.13</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.13</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.066</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.066</offset>
+        </li>
+      </capMods>
+    </li>
+    <!--■■■MODERATE (4)■■■-->  
+    <li>
+      <label>moderate</label>
+      <minSeverity>0.30</minSeverity>
+      <partEfficiencyOffset>-0.4</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.33</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.33</offset>
+        </li>
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.2</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.1</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.1</offset>
+        </li>
+      </capMods>
+    </li>
+    <!--■■■SERIOUS (5)■■■-->  
+    <li>
+      <label>serious</label>
+      <minSeverity>0.50</minSeverity>
+      <partEfficiencyOffset>-0.55</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.54</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.54</offset>
+        </li>
+        
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.4</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.4</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.4</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.4</offset>
+        </li>
+      </capMods>
+    </li>
+    <!--■■■EXTREME (6)■■■-->  
+    <li>
+      <label>extreme</label>
+      <minSeverity>0.85</minSeverity>
+      <partEfficiencyOffset>-0.8</partEfficiencyOffset>
+      <capMods>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.9</offset>
+        </li>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.9</offset>
+        </li>
+        <li>
+          <capacity>Hearing</capacity>
+          <offset>-0.8</offset>
+        </li>
+        <li>
+          <capacity>Talking</capacity>
+          <offset>-0.8</offset>
+        </li>
+        <li>
+          <capacity>Sight</capacity>
+          <offset>-0.8</offset>
+        </li>
+        <li>
+          <capacity>Breathing</capacity>
+          <offset>-0.6</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<!--■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■5. VOLTAGE HEDIFF■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■--> 
+<HediffDef>
+    <defName>ZR_VOLTAGE_HEDIFF_DEF</defName>
+    <label>voltage shock</label>
+    <description>A weaponized electric shock that can cause cardiac arrest.</description>
+    
+    <labelNoun>voltage</labelNoun>
+    <hediffClass>HediffWithComps</hediffClass>
+    <battleStateLabel>shocked</battleStateLabel>
+    <maxSeverity>0.99</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SelfHeal">
+        <healAmount>0.012</healAmount>
+      </li>
+    </comps>
+    <stages>
+      <!--■■■INITIAL (1)■■■-->
+      <li>
+        <label>initial</label>
+        <minSeverity>0.1</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>3</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MINOR (2)■■■-->
+      <li>
+        <label>minor</label>
+        <minSeverity>0.28</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>2</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.19</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.19</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.095</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.19</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.095</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MODERATE (3)■■■-->
+      <li>
+        <minSeverity>0.48</minSeverity>
+        <label>moderate</label>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>1</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.31</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.31</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.156</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.31</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.156</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■MAJOR (4)■■■-->
+      <li>
+        <minSeverity>0.64</minSeverity>
+        <label>major</label>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>0.6</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.44</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.44</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.44</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.22</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li> 
+      <!--■■■SERIOUS (5)■■■-->  
+      <li>
+        <label>serious</label>
+        <minSeverity>0.78</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>0.4</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.58</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.58</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.58</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.35</offset>
+          </li>
+        </capMods>
+      </li>
+      <!--■■■EXTREME (6)■■■-->  
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.90</minSeverity>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <mtbDays>0.2</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.70</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.70</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.40</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.70</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.40</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+</HediffDef>
+  
+</Defs>
